@@ -1,0 +1,9 @@
+ojakoo@Ubuntu-desktop:~/code/school/devops-docker$ docker run -d  devopsdockeruh/simple-web-service:alpine
+e52aae0a18339abf660bed13695ce83d786a548d0833bcbe39ade7a2911f3b8a
+ojakoo@Ubuntu-desktop:~/code/school/devops-docker$ docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED         STATUS         PORTS     NAMES
+e52aae0a1833   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   5 seconds ago   Up 5 seconds             fervent_bardeen
+ojakoo@Ubuntu-desktop:~/code/school/devops-docker$ docker exec -it e5 /bin/sh
+/usr/src/app # tail -f ./text.log
+2023-06-08 12:24:03 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
