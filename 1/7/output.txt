@@ -1,0 +1,30 @@
+ojakoo@Ubuntu-desktop:~/code/school/devops-docker/1/7$ docker build . -t curler
+Sending build context to Docker daemon  3.584kB
+Step 1/5 : FROM ubuntu:20.04
+ ---> 88bd68917189
+Step 2/5 : RUN apt-get -y update
+ ---> Using cache
+ ---> 6318334cc313
+Step 3/5 : RUN apt-get -y install curl
+ ---> Using cache
+ ---> 64e0727f29b3
+Step 4/5 : COPY ./script.sh .
+ ---> Using cache
+ ---> ecca5bfaf576
+Step 5/5 : CMD "./script.sh"
+ ---> Running in 47c426cc8c04
+Removing intermediate container 47c426cc8c04
+ ---> 7416b12fb2c4
+Successfully built 7416b12fb2c4
+Successfully tagged curler:latest
+ojakoo@Ubuntu-desktop:~/code/school/devops-docker/1/7$ docker run -it curler
+Input website:
+helsinki.fi 
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>
