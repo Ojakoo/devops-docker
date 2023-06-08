@@ -1,0 +1,4 @@
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS                     PORTS		NAMES
+d9a6e1be04a1   flyway/flyway:9.18.0-alpine   "flyway -connectRetr…"   11 seconds ago   Exited (0) 6 seconds ago                 flyway-1
+21d5d43ddbe0   postgres:15.3                 "docker-entrypoint.s…"   11 seconds ago   Up 9 seconds               5432/tcp      database
+3d809473d9d8   mysql:8.0                     "docker-entrypoint.s…"   3 minutes ago    Exited (0) 3 minutes ago                 test-db
