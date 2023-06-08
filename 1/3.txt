@@ -1,0 +1,8 @@
+ojakoo@Ubuntu-desktop:~/code/kinopoli$ docker run -d devopsdockeruh/simple-web-service:ubuntu 
+2d2f80e7a3845d99ec19faf96624a02bd1c34f4767dea47c407f6772f1182dad
+ojakoo@Ubuntu-desktop:~/code/kinopoli$ docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED          STATUS          PORTS     NAMES
+2d2f80e7a384   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   40 seconds ago   Up 39 seconds             affectionate_albattani
+ojakoo@Ubuntu-desktop:~/code/kinopoli$ docker exec -it 2 /bin/bash
+root@2d2f80e7a384:/usr/src/app# tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
