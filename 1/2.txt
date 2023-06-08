@@ -1,0 +1,4 @@
+ojakoo@Ubuntu-desktop:~/code/kinopoli$ docker image list
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+ojakoo@Ubuntu-desktop:~/code/kinopoli$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
