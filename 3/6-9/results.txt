@@ -1,0 +1,12 @@
+
+Before:
+
+REPOSITORY  SIZE
+frontend    469MB
+backend     1.28GB
+
+After:
+
+REPOSITORY  SIZE
+frontend    17.7MB
+backend     18.1MB
