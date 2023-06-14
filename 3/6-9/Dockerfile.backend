@@ -1,4 +1,4 @@
-FROM golang:1.16-alpine as builder
+FROM golang:1.16-alpine AS builder
 
 WORKDIR /app
 
@@ -8,10 +8,10 @@ RUN go mod download
 COPY . .
 
 RUN go get ./ && \
-  go build -o /main
+  CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /main
 
 FROM scratch
 
-COPY --from=builder /main /go
+COPY --from=builder /main /main
 
-CMD ["/go"]
+ENTRYPOINT ["/main"]
