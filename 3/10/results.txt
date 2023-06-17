@@ -1,0 +1,6 @@
+
+REPOSITORY    SIZE
+app-ui-after  11.8MB
+app-ui-before 143MB
+
+Made a pretty simple optimisation of changing the mginx image to alpine-slim version, but improved the image size making it 10x smaller.
